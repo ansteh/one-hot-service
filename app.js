@@ -33,7 +33,10 @@ app.post('/decode/:id', (req, res) => {
 });
 
 const server = require('http').Server(app);
-const port = 3000;
+const config = require('./server/config.js');
+
+
+let port = config.port || 3000;
 
 server.listen(port, function(){
   console.log(`listening on *:${port}`);
