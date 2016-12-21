@@ -4,10 +4,11 @@ const express        = require('express');
 const app            = express();
 const bodyParser     = require('body-parser');
 const _              = require('lodash');
-
+const cors           = require('cors');
 const Onehot         = require('./server/onehot.js');
 const Autoincrement  = require('./server/auto-increment');
 
+app.use(cors());
 app.use(bodyParser.json());
 
 app.post('/encode/:id', (req, res) => {

@@ -7,7 +7,8 @@ const encode = (id, input) => {
   return new Promise((resolve, reject) => {
     try {
       let encoder;
-      if(encoders.has(id)) {
+      // if(encoders.has(id)) {
+      if(false) {
         encoder = encoders.get(id);
       } else {
         let sample = _.first(input);
